@@ -7,6 +7,9 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
+import com.dkexception.quickutils.utils.QuickUtilsConstants
+import com.dkexception.quickutils.R
+import com.dkexception.quickutils.utils.UiText
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
@@ -17,23 +20,25 @@ class WhatsappLauncherViewModel @Inject constructor() : ViewModel() {
 
     var latestTypedValue by mutableStateOf("")
 
-    fun onConfirmClicked(context: Context): String? = try {
+    fun onConfirmClicked(context: Context): UiText? = try {
 
         val relevantValue = latestTypedValue.replace(" ", "").replace("+", "")
 
         if (relevantValue.isBlank()) {
-            "Please enter a valid value"
+            UiText.StringResource(R.string.whatsapp_launcher_error_data)
         } else {
             context.startActivity(
                 Intent(Intent.ACTION_VIEW).apply {
                     data = Uri.parse(
-                        "https://api.whatsapp.com/send?phone=$latestTypedValue"
+                        "${QuickUtilsConstants.WHATSAPP_LAUNCH_URL}$latestTypedValue"
                     )
                 }
             )
             null
         }
     } catch (e: Exception) {
-        e.localizedMessage ?: "Something went wrong!"
+        e.localizedMessage?.let(UiText::DynamicString) ?: run {
+            UiText.StringResource(R.string.generic_error)
+        }
     }
 }

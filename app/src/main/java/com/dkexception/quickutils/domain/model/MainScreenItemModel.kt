@@ -3,6 +3,7 @@ package com.dkexception.quickutils.domain.model
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import com.dkexception.quickutils.R
+import com.dkexception.quickutils.utils.QuickUtilsConstants
 
 data class MainScreenItemModel(
     @StringRes val text: Int,
@@ -15,7 +16,7 @@ data class MainScreenItemModel(
             MainScreenItemModel(
                 text = R.string.whatsapp_launcher,
                 image = R.drawable.ic_whatsapp,
-                navigationRouteName = "whatsapp"
+                navigationRouteName = QuickUtilsConstants.ScreenRoutes.WHATSAPP_SCREEN_ROUTE
             )
         )
     }

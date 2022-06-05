@@ -11,6 +11,7 @@ import androidx.navigation.compose.rememberNavController
 import com.dkexception.quickutils.presentation.main_screen.MainScreen
 import com.dkexception.quickutils.presentation.whatsapp_launcher.WhatsappLauncherScreen
 import com.dkexception.quickutils.ui.theme.QuickUtilsTheme
+import com.dkexception.quickutils.utils.QuickUtilsConstants
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -29,12 +30,12 @@ fun AppContent() = QuickUtilsTheme {
     val navHostController = rememberNavController()
     NavHost(
         navController = navHostController,
-        startDestination = "home"
+        startDestination = QuickUtilsConstants.ScreenRoutes.MAIN_SCREEN_ROUTE
     ) {
-        composable("home") {
+        composable(QuickUtilsConstants.ScreenRoutes.MAIN_SCREEN_ROUTE) {
             MainScreen(navHostController)
         }
-        composable("whatsapp") {
+        composable(QuickUtilsConstants.ScreenRoutes.WHATSAPP_SCREEN_ROUTE) {
             WhatsappLauncherScreen()
         }
     }

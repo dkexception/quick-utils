@@ -7,9 +7,11 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.dkexception.quickutils.R.string
 import com.dkexception.quickutils.ui.composables.QuickUtilsEditText
 import com.dkexception.quickutils.ui.composables.QuickUtilsTopAppBar
 import kotlinx.coroutines.launch
@@ -25,7 +27,7 @@ fun WhatsappLauncherScreen(
     Scaffold(
         modifier = Modifier.fillMaxSize(),
         snackbarHost = { SnackbarHost(snackbarHostState) },
-        topBar = { QuickUtilsTopAppBar(title = "Whatsapp Launcher") }
+        topBar = { QuickUtilsTopAppBar(title = stringResource(string.whatsapp_screen_title)) }
     ) {
 
         val context = LocalContext.current
@@ -45,7 +47,7 @@ fun WhatsappLauncherScreen(
                     modifier = Modifier.fillMaxWidth(),
                     optionalKeyboardType = KeyboardType.Phone,
                     optionalInitialValue = viewModel.latestTypedValue,
-                    optionalHint = "Enter a number with ISD code"
+                    optionalHint = stringResource(string.whatsapp_enter_number_hint)
                 ) {
                     viewModel.latestTypedValue = it
                 }
@@ -55,12 +57,12 @@ fun WhatsappLauncherScreen(
                     onClick = {
                         viewModel.onConfirmClicked(context)?.let {
                             scope.launch {
-                                snackbarHostState.showSnackbar(it)
+                                snackbarHostState.showSnackbar(it.asString(context))
                             }
                         }
                     }
                 ) {
-                    Text(text = "Launch")
+                    Text(text = stringResource(string.whatsapp_launch))
                 }
             }
         }
