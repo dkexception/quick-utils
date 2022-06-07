@@ -7,6 +7,6 @@ object QuickUtilsConstants {
         const val WHATSAPP_SCREEN_ROUTE = "whatsapp"
     }
 
-    const val WHATSAPP_LAUNCH_URL = "https://api.whatsapp.com/send?phone="
+    const val WHATSAPP_LAUNCH_URL = "https://api.whatsapp.com/send?phone=%s&text=%s"
     const val WHATSAPP_COLOR = 0xFF25D366
 }

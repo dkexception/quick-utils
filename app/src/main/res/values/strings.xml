@@ -3,6 +3,8 @@
     <string name="app_name">QuickUtils</string>
 
     <string name="generic_error">Something went wrong!</string>
+    <string name="undo">Undo</string>
+    <string name="delete">Delete</string>
 
     <!--region Main Screen-->
     <string name="main_screen_title">Home</string>
@@ -12,8 +14,13 @@
     <!--region Whatsapp Screen-->
     <string name="whatsapp_screen_title">Whatsapp Launcher</string>
     <string name="whatsapp_enter_number_hint">Enter a number with ISD code</string>
+    <string name="whatsapp_enter_text_hint">Enter a text message to send (optional)</string>
     <string name="whatsapp_launcher_error_data">Please enter a valid value</string>
     <string name="whatsapp_launch">Launch</string>
+    <string name="whatsapp_recently_used_numbers">Recently used</string>
+    <string name="whatsapp_no_recently_used_numbers">Recently used numbers will be shown here</string>
+    <string name="whatsapp_entity_deletion_success">Successfully deleted!</string>
+    <string name="whatsapp_entity_deletion_failed">Deletion failed, please try again later!</string>
     <!--endregion-->
 
 </resources>

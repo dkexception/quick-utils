@@ -8,10 +8,15 @@ import androidx.compose.runtime.Composable
 
 @Composable
 fun QuickUtilsTopAppBar(
-    title: String
+	title: String
 ) = SmallTopAppBar(
-    title = { Text(title) },
-    colors = TopAppBarDefaults.smallTopAppBarColors(
-        containerColor = MaterialTheme.colorScheme.primaryContainer
-    )
+	title = {
+		Text(
+			text = title,
+			color = MaterialTheme.colorScheme.onPrimary
+		)
+	},
+	colors = TopAppBarDefaults.smallTopAppBarColors(
+		containerColor = MaterialTheme.colorScheme.primary
+	)
 )
