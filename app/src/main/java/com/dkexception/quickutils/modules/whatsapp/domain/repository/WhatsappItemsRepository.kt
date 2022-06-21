@@ -1,6 +1,6 @@
-package com.dkexception.quickutils.domain.repository
+package com.dkexception.quickutils.modules.whatsapp.domain.repository
 
-import com.dkexception.quickutils.domain.model.WhatsappListDataModel
+import com.dkexception.quickutils.modules.whatsapp.domain.model.WhatsappListDataModel
 import com.dkexception.quickutils.utils.Resource
 import kotlinx.coroutines.flow.Flow
 

@@ -1,4 +1,4 @@
-package com.dkexception.quickutils.ui.composables
+package com.dkexception.quickutils.ui.commoncomposables
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.SmallTopAppBar

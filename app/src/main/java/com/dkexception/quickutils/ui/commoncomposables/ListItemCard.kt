@@ -1,4 +1,4 @@
-package com.dkexception.quickutils.ui.composables
+package com.dkexception.quickutils.ui.commoncomposables
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.ExperimentalMaterialApi

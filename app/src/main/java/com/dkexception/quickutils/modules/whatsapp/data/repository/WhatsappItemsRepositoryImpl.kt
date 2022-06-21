@@ -1,12 +1,12 @@
-package com.dkexception.quickutils.data.repository
+package com.dkexception.quickutils.modules.whatsapp.data.repository
 
 import com.dkexception.quickutils.R
 import com.dkexception.quickutils.data.local.dao.WhatsappItemsDao
-import com.dkexception.quickutils.data.mapper.toWhatsappItemsEntity
-import com.dkexception.quickutils.data.mapper.toWhatsappListDataModel
+import com.dkexception.quickutils.modules.whatsapp.data.mapper.toWhatsappItemsEntity
+import com.dkexception.quickutils.modules.whatsapp.data.mapper.toWhatsappListDataModel
 import com.dkexception.quickutils.di.IoDispatcher
-import com.dkexception.quickutils.domain.model.WhatsappListDataModel
-import com.dkexception.quickutils.domain.repository.WhatsappItemsRepository
+import com.dkexception.quickutils.modules.whatsapp.domain.model.WhatsappListDataModel
+import com.dkexception.quickutils.modules.whatsapp.domain.repository.WhatsappItemsRepository
 import com.dkexception.quickutils.utils.Resource
 import com.dkexception.quickutils.utils.Resource.Loading
 import com.dkexception.quickutils.utils.UiText

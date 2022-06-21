@@ -1,6 +1,6 @@
-package com.dkexception.quickutils.presentation.whatsapp_launcher
+package com.dkexception.quickutils.modules.whatsapp.presentation.whatsapp_launcher
 
-import com.dkexception.quickutils.domain.model.WhatsappListDataModel
+import com.dkexception.quickutils.modules.whatsapp.domain.model.WhatsappListDataModel
 import com.dkexception.quickutils.utils.UiText
 
 data class WhatsappScreenState(

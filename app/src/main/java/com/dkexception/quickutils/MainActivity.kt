@@ -8,8 +8,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.dkexception.quickutils.presentation.main_screen.MainScreen
-import com.dkexception.quickutils.presentation.whatsapp_launcher.WhatsappLauncherScreen
+import com.dkexception.quickutils.modules.delhivery.presentation.DelhiveryTrackingScreen
+import com.dkexception.quickutils.modules.main.presentation.main_screen.MainScreen
+import com.dkexception.quickutils.modules.whatsapp.presentation.whatsapp_launcher.WhatsappLauncherScreen
 import com.dkexception.quickutils.ui.theme.QuickUtilsTheme
 import com.dkexception.quickutils.utils.QuickUtilsConstants
 import dagger.hilt.android.AndroidEntryPoint
@@ -37,6 +38,9 @@ fun AppContent() = QuickUtilsTheme {
 		}
 		composable(QuickUtilsConstants.ScreenRoutes.WHATSAPP_SCREEN_ROUTE) {
 			WhatsappLauncherScreen()
+		}
+		composable(QuickUtilsConstants.ScreenRoutes.DELHIVERY_SCREEN_ROUTE) {
+			DelhiveryTrackingScreen()
 		}
 	}
 }

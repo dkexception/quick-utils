@@ -1,4 +1,4 @@
-package com.dkexception.quickutils.presentation.whatsapp_launcher
+package com.dkexception.quickutils.modules.whatsapp.presentation.whatsapp_launcher
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -22,8 +22,8 @@ import androidx.compose.ui.unit.TextUnitType
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.dkexception.quickutils.R.string
-import com.dkexception.quickutils.ui.composables.ListItemCard
-import com.dkexception.quickutils.ui.composables.QuickUtilsTopAppBar
+import com.dkexception.quickutils.ui.commoncomposables.ListItemCard
+import com.dkexception.quickutils.ui.commoncomposables.QuickUtilsTopAppBar
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalUnitApi::class)
 @Composable

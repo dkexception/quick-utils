@@ -1,4 +1,4 @@
-package com.dkexception.quickutils.presentation.whatsapp_launcher
+package com.dkexception.quickutils.modules.whatsapp.presentation.whatsapp_launcher
 
 import android.content.Context
 import android.content.Intent
@@ -9,8 +9,8 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.dkexception.quickutils.R
-import com.dkexception.quickutils.domain.model.WhatsappListDataModel
-import com.dkexception.quickutils.domain.repository.WhatsappItemsRepository
+import com.dkexception.quickutils.modules.whatsapp.domain.model.WhatsappListDataModel
+import com.dkexception.quickutils.modules.whatsapp.domain.repository.WhatsappItemsRepository
 import com.dkexception.quickutils.utils.QuickUtilsConstants
 import com.dkexception.quickutils.utils.Resource.*
 import com.dkexception.quickutils.utils.UiText

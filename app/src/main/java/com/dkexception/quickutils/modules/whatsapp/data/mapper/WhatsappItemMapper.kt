@@ -1,7 +1,7 @@
-package com.dkexception.quickutils.data.mapper
+package com.dkexception.quickutils.modules.whatsapp.data.mapper
 
 import com.dkexception.quickutils.data.local.entities.WhatsappItemsEntity
-import com.dkexception.quickutils.domain.model.WhatsappListDataModel
+import com.dkexception.quickutils.modules.whatsapp.domain.model.WhatsappListDataModel
 
 fun WhatsappListDataModel.toWhatsappItemsEntity() = WhatsappItemsEntity(
 	id = uniqueKey,

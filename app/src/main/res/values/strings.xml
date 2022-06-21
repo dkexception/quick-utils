@@ -9,6 +9,7 @@
     <!--region Main Screen-->
     <string name="main_screen_title">Home</string>
     <string name="whatsapp_launcher">Launch Whatsapp for number</string>
+    <string name="delhivery_tracking">Track Delhivery shipment</string>
     <!--endregion-->
 
     <!--region Whatsapp Screen-->
@@ -21,6 +22,10 @@
     <string name="whatsapp_no_recently_used_numbers">Recently used numbers will be shown here</string>
     <string name="whatsapp_entity_deletion_success">Successfully deleted!</string>
     <string name="whatsapp_entity_deletion_failed">Deletion failed, please try again later!</string>
+    <!--endregion-->
+
+    <!--region Delhivery Tracking Screen-->
+    <string name="delhivery_screen_title">Delhivery tracker</string>
     <!--endregion-->
 
 </resources>

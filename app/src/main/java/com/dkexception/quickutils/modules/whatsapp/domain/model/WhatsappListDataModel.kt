@@ -1,4 +1,4 @@
-package com.dkexception.quickutils.domain.model
+package com.dkexception.quickutils.modules.whatsapp.domain.model
 
 data class WhatsappListDataModel(
 	val phoneNumberString: String,
