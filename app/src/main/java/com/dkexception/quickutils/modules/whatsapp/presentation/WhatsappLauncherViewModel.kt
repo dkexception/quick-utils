@@ -1,4 +1,4 @@
-package com.dkexception.quickutils.modules.whatsapp.presentation.whatsapp_launcher
+package com.dkexception.quickutils.modules.whatsapp.presentation
 
 import android.content.Context
 import android.content.Intent
@@ -6,9 +6,10 @@ import android.net.Uri
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.dkexception.quickutils.R
+import com.dkexception.quickutils.base.BaseViewModel
+import com.dkexception.quickutils.base.SnackbarState
 import com.dkexception.quickutils.modules.whatsapp.domain.model.WhatsappListDataModel
 import com.dkexception.quickutils.modules.whatsapp.domain.repository.WhatsappItemsRepository
 import com.dkexception.quickutils.utils.QuickUtilsConstants
@@ -24,10 +25,9 @@ import javax.inject.Inject
 @HiltViewModel
 class WhatsappLauncherViewModel @Inject constructor(
 	private val whatsappItemsRepository: WhatsappItemsRepository
-) : ViewModel() {
+) : BaseViewModel<WhatsappScreenState>() {
 	
-	var state by mutableStateOf(WhatsappScreenState())
-		private set
+	override var state: WhatsappScreenState by mutableStateOf(WhatsappScreenState())
 	
 	private var lastDeletedItem: WhatsappListDataModel? = null
 	private var snackBarJob: Job? = null

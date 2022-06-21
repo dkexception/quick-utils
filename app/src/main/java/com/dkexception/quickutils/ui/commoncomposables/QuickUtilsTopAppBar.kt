@@ -1,14 +1,14 @@
 package com.dkexception.quickutils.ui.commoncomposables
 
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.SmallTopAppBar
-import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 
 @Composable
 fun QuickUtilsTopAppBar(
-	title: String
+	title: String,
+	optionalOnBackClickAction: (() -> Unit)? = null
 ) = SmallTopAppBar(
 	title = {
 		Text(
@@ -18,5 +18,16 @@ fun QuickUtilsTopAppBar(
 	},
 	colors = TopAppBarDefaults.smallTopAppBarColors(
 		containerColor = MaterialTheme.colorScheme.primary
-	)
+	),
+	navigationIcon = {
+		optionalOnBackClickAction?.let {
+			IconButton(onClick = { it() }) {
+				Icon(
+					imageVector = Icons.Filled.ArrowBack,
+					contentDescription = "Back",
+					tint = MaterialTheme.colorScheme.onPrimary
+				)
+			}
+		}
+	}
 )
