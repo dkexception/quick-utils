@@ -24,7 +24,7 @@ data class MainScreenItemModel(
 			MainScreenItemModel(
 				text = R.string.delhivery_tracking,
 				image = R.drawable.delhivery_logo,
-				navigationRouteName = QuickUtilsConstants.ScreenRoutes.DELHIVERY_SCREEN_ROUTE
+				navigationRouteName = QuickUtilsConstants.ScreenRoutes.DELHIVERY_LIST_SCREEN_ROUTE
 			)
 		)
 	}

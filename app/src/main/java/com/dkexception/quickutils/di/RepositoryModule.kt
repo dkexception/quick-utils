@@ -1,7 +1,7 @@
 package com.dkexception.quickutils.di
 
 import com.dkexception.quickutils.modules.delhivery.domain.repository.DelhiveryTrackingRepository
-import com.dkexception.quickutils.modules.delhivery.domain.repository.DelhiveryTrackingRepositoryImpl
+import com.dkexception.quickutils.modules.delhivery.data.repository.DelhiveryTrackingRepositoryImpl
 import com.dkexception.quickutils.modules.whatsapp.data.repository.WhatsappItemsRepositoryImpl
 import com.dkexception.quickutils.modules.whatsapp.domain.repository.WhatsappItemsRepository
 import dagger.Binds

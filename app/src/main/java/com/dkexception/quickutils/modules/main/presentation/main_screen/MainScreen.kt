@@ -14,27 +14,25 @@ import com.dkexception.quickutils.ui.commoncomposables.ItemCard
 
 @Composable
 fun MainScreen(
-	paddingValues: PaddingValues,
-	navController: NavController
+    navController: NavController
 ) = Column(
 	Modifier
 		.fillMaxSize()
 		.padding(vertical = 16.dp, horizontal = 8.dp)
 ) {
-	LazyVerticalGrid(
-		columns = GridCells.Fixed(2),
-		contentPadding = paddingValues,
-	) {
-		items(items = MainScreenItemModel.getAllItems()) {
-			ItemCard(
-				modifier = Modifier
+    LazyVerticalGrid(
+        columns = GridCells.Fixed(2)
+    ) {
+        items(items = MainScreenItemModel.getAllItems()) {
+            ItemCard(
+                modifier = Modifier
 					.wrapContentWidth()
 					.wrapContentHeight(),
-				itemText = LocalContext.current.getString(it.text),
-				imageRes = it.image,
-				optionalTintColor = it.optionalTintColor,
-				optionalOnClickAction = { navController.navigate(it.navigationRouteName) }
-			)
-		}
-	}
+                itemText = LocalContext.current.getString(it.text),
+                imageRes = it.image,
+                optionalTintColor = it.optionalTintColor,
+                optionalOnClickAction = { navController.navigate(it.navigationRouteName) }
+            )
+        }
+    }
 }

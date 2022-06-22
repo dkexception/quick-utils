@@ -6,7 +6,7 @@ import retrofit2.http.Query
 
 interface DelhiveryApi {
 	
-	@GET("/track")
+	@GET("track")
 	suspend fun getTrackingInfoForShipment(
 		@Query("wbn") waybillNumber: String
 	): DelhiveryTrackingDto?

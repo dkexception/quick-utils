@@ -26,6 +26,9 @@
 
     <!--region Delhivery Tracking Screen-->
     <string name="delhivery_screen_title">Delhivery tracker</string>
+    <string name="delhivery_enter_waybill_number_hint">Enter a valid WayBill number</string>
+    <string name="delhivery_get_details">Get details</string>
+    <string name="delhivery_no_recently_added_parcels">Recently added parcels will be shown here</string>
     <!--endregion-->
 
 </resources>
